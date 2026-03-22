@@ -8,6 +8,8 @@
 
 # Add a custom feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+sed -i '$a src-git modem https://github.com/FUjr/modem_feeds.git' feeds.conf.default
+sed -i '$a src-git omr https://github.com/Ysurac/openmptcprouter-feeds.git' feeds.conf.default
 
 # Remove unnecessary packages
 # rm -rf package/utils/{ucode,fbtest}
