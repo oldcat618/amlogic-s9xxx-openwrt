@@ -9,7 +9,7 @@
 # ------------------------------- Main source configuration -------------------------------
 #
 # Set the default LAN IP address
-default_ip="192.168.1.1"
+default_ip="192.168.100.1"
 ip_regex="^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
 # Override default IP if a valid custom IP is provided as the first argument
 [[ -n "${1}" && "${1}" != "${default_ip}" && "${1}" =~ ${ip_regex} ]] && {
@@ -22,8 +22,9 @@ sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.::0:99999:7
 
 # Append source repository information to etc/openwrt_release
 sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package/base-files/files/etc/openwrt_release
-echo "DISTRIB_SOURCEREPO='github.com/openwrt/openwrt'" >>package/base-files/files/etc/openwrt_release
-echo "DISTRIB_SOURCECODE='openwrt'" >>package/base-files/files/etc/openwrt_release
+echo "DISTRIB_SOURCEREPO='github.com/oldcat618/openwrt'" >>package/base-files/files/etc/openwrt_release
+echo "DISTRIB_REVISION='R26.3.22'" >>package/base-files/files/etc/openwrt_release
+echo "DISTRIB_SOURCECODE='omr'" >>package/base-files/files/etc/openwrt_release
 echo "DISTRIB_SOURCEBRANCH='main'" >>package/base-files/files/etc/openwrt_release
 
 # Configure ccache for build acceleration
