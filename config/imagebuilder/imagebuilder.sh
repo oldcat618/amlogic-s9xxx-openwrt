@@ -217,7 +217,9 @@ rebuild_firmware() {
         luci-mod-status luci-mod-system luci-proto-3g luci-proto-ipip luci-proto-ipv6 \
         luci-proto-ncm luci-proto-openconnect luci-proto-ppp luci-proto-qmi luci-proto-relay \
         \
-        luci-app-amlogic luci-i18n-amlogic-zh-cn \
+        luci-app-amlogic luci-i18n-amlogic-zh-cn luci-app-qmodem luci-i18n-qmodem-zh-cn luci-app-qmodem-sms \
+        luci-i18n-qmodem-sms-zh-cn openmptcprouter-full luci-i18n-openmptcprouter-zh-cn luci-theme-openmptcprouter \
+        luci-app-openmptcprouter luci-app-mptcp luci-i18n-mptcp-zh-cn \
         \
         ${config_list} \
         "
