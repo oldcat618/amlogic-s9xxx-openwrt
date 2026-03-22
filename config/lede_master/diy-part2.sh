@@ -51,6 +51,8 @@ fi
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
+git clone https://github.com/FUjr/modem_feeds.git package/qmodem
+git clone https://github.com/Ysurac/openmptcprouter-feeds.git package/omr
 #
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
